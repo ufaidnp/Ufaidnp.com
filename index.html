@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity Student & Hardware Hacker — Personal Portfolio" />
+  <meta name="keywords" content="cybersecurity, hardware hacking, portfolio, developer, security researcher" />
+  <meta name="author" content="Your Name" />
+  <title>Your Name — Cybersecurity & Hardware Hacker</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── CURSOR ─── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">YN<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span> Available for Internships & Freelance
+      </div>
+      <h1 class="hero-name reveal-up delay-1">
+        <span class="line">Your</span>
+        <span class="line accent-text">Name</span>
+      </h1>
+      <p class="hero-title reveal-up delay-2">Cybersecurity Student <span class="divider">/</span> Hardware Hacker</p>
+      <p class="hero-tagline reveal-up delay-3">
+        Breaking things to understand them.<br />Building systems that resist being broken.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+      <div class="hero-stats reveal-up delay-5">
+        <div class="stat"><span class="stat-num" data-target="15">0</span><span class="stat-label">Projects</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">CTF Wins</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">Tools Built</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint reveal-up delay-5">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">— About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <h2 class="section-title">I <span class="accent-text">break</span> things<br />to build better ones.</h2>
+          <p class="about-bio">
+            I'm a cybersecurity student and hardware hacker obsessed with the intersection of low-level systems and digital security. I spend my nights reverse engineering firmware, building custom PCBs, and competing in CTF competitions.
+          </p>
+          <p class="about-bio">
+            My toolkit spans from soldering irons and logic analyzers to penetration testing frameworks and custom exploit dev. I believe the best defenders are those who think like attackers.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item reveal-left">
+              <div class="highlight-icon">🔐</div>
+              <div>
+                <strong>Cybersecurity</strong>
+                <span>Pentesting, CTF, Exploit Dev</span>
+              </div>
+            </div>
+            <div class="highlight-item reveal-left delay-1">
+              <div class="highlight-icon">🔧</div>
+              <div>
+                <strong>Hardware Hacking</strong>
+                <span>JTAG, UART, PCB Design</span>
+              </div>
+            </div>
+            <div class="highlight-item reveal-left delay-2">
+              <div class="highlight-icon">💻</div>
+              <div>
+                <strong>Development</strong>
+                <span>Python, C, Rust, Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="terminal-card">
+            <div class="terminal-bar">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+              <span class="t-title">whoami.sh</span>
+            </div>
+            <div class="terminal-body" id="terminal-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">— Projects</div>
+      <h2 class="section-title reveal-up">Selected <span class="accent-text">Work</span></h2>
+      <p class="section-sub reveal-up">A curated selection of what I've built, broken, and learned from.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card featured reveal-up" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">01</div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scapy</span>
+                <span class="tag">Networking</span>
+              </div>
+            </div>
+            <h3 class="project-title">NetScan Pro</h3>
+            <p class="project-desc">A custom network reconnaissance tool with passive fingerprinting, service detection, and vulnerability mapping. Faster than Nmap for targeted ops.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-1" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">02</div>
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">UART</span>
+                <span class="tag">Hardware</span>
+              </div>
+            </div>
+            <h3 class="project-title">FirmExtract</h3>
+            <p class="project-desc">Hardware-level firmware extraction tool using UART/JTAG interfaces. Automates serial communication and dumps flash memory from embedded devices.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-2" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">03</div>
+              <div class="project-tags">
+                <span class="tag">Rust</span>
+                <span class="tag">Binary</span>
+                <span class="tag">Reverse Eng.</span>
+              </div>
+            </div>
+            <h3 class="project-title">BinDiff CLI</h3>
+            <p class="project-desc">A blazing-fast binary diffing tool written in Rust. Compares compiled binaries at byte and function level to identify patches and security vulnerabilities.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-1" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">04</div>
+              <div class="project-tags">
+                <span class="tag">PCB</span>
+                <span class="tag">KiCad</span>
+                <span class="tag">Arduino</span>
+              </div>
+            </div>
+            <h3 class="project-title">BadUSB MkII</h3>
+            <p class="project-desc">Custom-designed USB HID attack device on a minimal PCB footprint. Supports payload injection, keystroke logging, and wireless exfiltration via BLE.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-2" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">05</div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">IDS</span>
+              </div>
+            </div>
+            <h3 class="project-title">AnomalyIDS</h3>
+            <p class="project-desc">ML-based intrusion detection system trained on network traffic. Uses an autoencoder to flag anomalous packet behavior in real-time with low false-positive rate.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-3" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div class="project-num">06</div>
+              <div class="project-tags">
+                <span class="tag">Web</span>
+                <span class="tag">CTF</span>
+                <span class="tag">OSINT</span>
+              </div>
+            </div>
+            <h3 class="project-title">CTF Toolkit</h3>
+            <p class="project-desc">A consolidated web-based toolkit for CTF competitions. Includes decoders, cipher solvers, steg analyzers, and OSINT scrapers in a clean unified interface.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link">Live Demo <span>→</span></a>
+              <a href="#" class="project-link-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">— Skills</div>
+      <h2 class="section-title reveal-up">What I <span class="accent-text">Work With</span></h2>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal-up">
+          <div class="cat-header">
+            <div class="cat-icon">🔐</div>
+            <h3>Cybersecurity</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Penetration Testing</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>CTF / Exploit Dev</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Network Security</span><span class="skill-pct">79%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="79"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Reverse Engineering</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>OSINT</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-1">
+          <div class="cat-header">
+            <div class="cat-icon">🔧</div>
+            <h3>Hardware</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>PCB Design (KiCad)</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JTAG / UART</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Firmware Analysis</span><span class="skill-pct">77%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="77"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Arduino / ESP32</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>RF / SDR</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-2">
+          <div class="cat-header">
+            <div class="cat-icon">💻</div>
+            <h3>Development</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Python</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>C / C++</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Rust</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Bash / Shell</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML / CSS / JS</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool Badges -->
+      <div class="tools-section reveal-up">
+        <h3 class="tools-title">Tools & Platforms</h3>
+        <div class="tools-badges">
+          <span class="badge">Kali Linux</span>
+          <span class="badge">Metasploit</span>
+          <span class="badge">Burp Suite</span>
+          <span class="badge">Wireshark</span>
+          <span class="badge">Ghidra</span>
+          <span class="badge">IDA Pro</span>
+          <span class="badge">Binwalk</span>
+          <span class="badge">Nmap</span>
+          <span class="badge">Hashcat</span>
+          <span class="badge">Git</span>
+          <span class="badge">Docker</span>
+          <span class="badge">GDB / PEDA</span>
+          <span class="badge">OpenWRT</span>
+          <span class="badge">HackRF</span>
+          <span class="badge">Flipper Zero</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">— Contact</div>
+      <h2 class="section-title reveal-up">Let's <span class="accent-text">Connect</span></h2>
+      <p class="section-sub reveal-up">Open to internships, collaborations, and anything that pushes the limits of security and hardware.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:hello@yourname.dev" class="contact-value">hello@yourname.dev</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/yourname" target="_blank" class="contact-value">github.com/yourname</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Discord</span>
+              <a href="#" class="contact-value">yourhandle#0000</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="#" target="_blank" class="contact-value">linkedin.com/in/yourname</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-right" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="off" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="form-success">Message sent! I'll get back to you soon. ✓</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">YN<span class="accent">.</span></span>
+        <p class="footer-copy">Built with purpose. © 2025 Your Name.</p>
+        <a href="#hero" class="back-top" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
